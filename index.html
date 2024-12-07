@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+        integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- <h1>Canvas Slider and Text Editor</h1> -->
+
+    <section class="main-container">
+       
+
+        <div class="sec1">
+            <!-- Canvas -->
+            <div id="canvas">
+                <img id="sliderImage" src="./imgs/pic7.jpg" alt="Slider Image"
+                    style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+
+            <!-- Slider Controls -->
+            <div class="btnContainer">
+                <i class="fa-solid fa-angles-left" class="btn prevBtn" onclick="prevImage()"></i></button>
+                <i class="fa-solid fa-angles-right" class="btn nextBtn" onclick="nextImage()"></i></button>
+            </div>
+        </div>
+
+
+
+        <!-- Add Text Input -->
+        <div class="sec2">
+            <h2>Message...</h2>
+            <div class="input-group">
+                <!-- <input type="text" name="" id="userInput" placeholder="Enter your message here"> -->
+                <textarea id="userInput" placeholder="Enter your message here.."></textarea><br>
+                <button onclick="addText()">Add Text</button>
+            </div>
+
+            <!-- Font Controls -->
+            <div class="controls">
+                <label for="fontStyle">Font:</label>
+                <select id="fontStyle" onchange="updateSelectedText()">
+                    <option value="Arial">Arial</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Impact">Impact</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Lucida Console">Lucida Console</option>
+                    <option value="Monospace">Monospace</option>
+                </select><br><br>
+                <label for="fontSize">Size:</label>
+                <input type="number" id="fontSize" value="16" min="10" max="48" onchange="updateSelectedText()"><br><br>
+                <label for="textColor">Color:</label>
+                <input type="color" id="textColor" value="#000000" onchange="updateSelectedText()">
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
